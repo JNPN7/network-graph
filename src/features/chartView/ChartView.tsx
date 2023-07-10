@@ -1,6 +1,5 @@
 import { useRef, useEffect, useState } from "react";
 import {
-  DragBehavior,
   drag,
   forceCenter,
   forceLink,
@@ -65,7 +64,7 @@ export default function ChartView() {
     const width: number = +svg.attr("width");
     const height: number = +svg.attr("height");
 
-    var [nodes, links] = getNodesAndLinks(people);
+    var [nodes, links]: [any, any[]] = getNodesAndLinks(people);
 
     const simulation = forceSimulation(nodes)
       .force("charge", forceManyBody().strength(STRENGTH))
@@ -75,7 +74,7 @@ export default function ChartView() {
       )
       .force("center", forceCenter(width / 2, height / 2));
 
-    const dragInteraction: DragBehavior<Element, unknown, unknown> = drag().on(
+    const dragInteraction: any = drag().on(
       "drag",
       (event, node: any) => {
         node.x = event.x;
