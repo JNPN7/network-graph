@@ -172,12 +172,6 @@ export default function ChartView() {
         <div className="m-10 flex items-center justify-around" onContextMenu={(e) => e.preventDefault()} id="svg">
           <svg ref={svgRef} width={800} height={500}></svg>
         </div>
-        <div className="options p-3">
-          <ul>
-            <li>testign</li>
-            <li>haha</li>
-          </ul>
-        </div>
       </div>
     </>
   );
