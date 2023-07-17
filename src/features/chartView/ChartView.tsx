@@ -2,6 +2,7 @@ import { useRef, useEffect, useState } from "react";
 import {
   drag,
   forceCenter,
+  forceCollide,
   forceLink,
   forceManyBody,
   forceSimulation,
@@ -72,13 +73,15 @@ export default function ChartView() {
         "link",
         forceLink(links).distance((link: any) => link.distance)
       )
-      .force("center", forceCenter(width / 2, height / 2));
+      .force("center", forceCenter(width / 2, height / 2))
+      .force("collide", forceCollide().strength(1).radius( (d: any) => d.size ).iterations(1))
 
     const dragInteraction: any = drag().on(
       "drag",
       (event, node: any) => {
         node.x = event.x;
         node.y = event.y;
+        console.log("here")
         simulation.alpha(1);
         simulation.restart();
       }
@@ -170,7 +173,7 @@ export default function ChartView() {
       )}
       <div className="container mx-auto">
         <div className="m-10 flex items-center justify-around" onContextMenu={(e) => e.preventDefault()} id="svg">
-          <svg ref={svgRef} width={800} height={500}></svg>
+          <svg ref={svgRef}  width={800} height={500}></svg>
         </div>
       </div>
     </>

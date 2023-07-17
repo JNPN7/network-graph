@@ -7,18 +7,18 @@ export type Person = {
 };
 
 const initialValue: Person[] = [
-  { id: 1, name: "Micheal", country: "USA" },
-  { id: 2, name: "Dwight", country: "USA" },
-  { id: 3, name: "Jim", country: "USA" },
-  { id: 4, name: "Pam", country: "USA" },
-  { id: 5, name: "Kevin", country: "USA" },
-  { id: 6, name: "Creed", country: "USA" },
+  { id: 1, name: "Micheal", country: "United States" },
+  { id: 2, name: "Dwight", country: "United States" },
+  { id: 3, name: "Jim", country: "United States" },
+  { id: 4, name: "Pam", country: "United States" },
+  { id: 5, name: "Kevin", country: "United States" },
+  { id: 6, name: "Creed", country: "United States" },
   { id: 7, name: "Robin", country: "Canada" },
   { id: 8, name: "Cartman", country: "Canada" },
   { id: 9, name: "Stan", country: "Canada" },
-  { id: 10, name: "Fry", country: "UK" },
-  { id: 11, name: "Amy", country: "UK" },
-  { id: 12, name: "Leela", country: "UK" },
+  { id: 10, name: "Fry", country: "France" },
+  { id: 11, name: "Amy", country: "France" },
+  { id: 12, name: "Leela", country: "France" },
 ];
 
 export const personSlice = createSlice({

@@ -6,7 +6,7 @@ const COUNTRY_COLOR = "#f1e05a"
 const COUNTRY_SIZE = 30
 const NAME_COLOR = "#77fd8c"
 const NAME_SIZE = 20
-const DISTANCE = 100
+const DISTANCE = 75
 
 export enum NODE_TYPE {
   country,
